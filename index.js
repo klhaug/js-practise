@@ -13,3 +13,9 @@ console.log(myTodos);
 
 
 // øv på å skrive funksjoner hver dag nå. Få inn forskjellen på expression, declaration, arrow, etc. 
+
+const firstFunction = () => {
+    return "firstFunction"
+}
+
+console.log(firstFunction());
