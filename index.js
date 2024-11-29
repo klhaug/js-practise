@@ -1,21 +1,36 @@
 
 //KINDS OF DATA ->  /posts /users /comments /photos /todos
 
-const getData = (kind) => {
-         fetch(`https://jsonplaceholder.typicode.com/${kind}`)
-          .then(response => response.json())
-}
-
-const myTodos = getData('todos');
-
-console.log(myTodos);
-
-
-
 // øv på å skrive funksjoner hver dag nå. Få inn forskjellen på expression, declaration, arrow, etc. 
+const shitConst = "shit"
 
-const firstFunction = () => {
-    return "firstFunction"
+console.log(newDeclaration(shitConst))
+
+function newDeclaration(par) {
+    return `This is a function ${par} declaration, and it is hoisted. I can access it wherever in the code.`
 }
 
-console.log(firstFunction());
+
+const arrowFunction = (par) => {
+    const message = `This is an arrow ${par} function. It can not be hoisted`; 
+    return message + ". Lol";
+}
+
+console.log(arrowFunction(shitConst));
+
+
+const newExpression = function() {
+    return shitConst;
+}
+
+console.log(newExpression())
+
+const shitExpression = newExpression();
+
+console.log(shitExpression)
+
+
+
+
+
+
