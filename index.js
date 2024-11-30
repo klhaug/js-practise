@@ -2,35 +2,61 @@
 //KINDS OF DATA ->  /posts /users /comments /photos /todos
 
 // øv på å skrive funksjoner hver dag nå. Få inn forskjellen på expression, declaration, arrow, etc. 
-const shitConst = "shit"
 
-console.log(newDeclaration(shitConst))
-
-function newDeclaration(par) {
-    return `This is a function ${par} declaration, and it is hoisted. I can access it wherever in the code.`
-}
-
-
-const arrowFunction = (par) => {
-    const message = `This is an arrow ${par} function. It can not be hoisted`; 
-    return message + ". Lol";
-}
-
-console.log(arrowFunction(shitConst));
-
-
-const newExpression = function() {
+function shitDeclaration() {
+    const shitConst = ['shit', 'poop', 'lolz'];
     return shitConst;
+};
+
+const runShit = shitDeclaration();
+
+const moreShit = runShit.map(shit => 'more ' + shit)
+
+console.log(moreShit);
+
+
+const shitArrow = () => "shit"
+
+const arrowShit = shitArrow();
+
+
+
+const arrowCounter = (n) => {
+
+    return () => {}
 }
 
-console.log(newExpression())
+//Jeg skal lage en funksjon, som når jeg kjører den med et tall, setter det tallet som startpunkt for en tellefunkjson. 
+//Ett tall inn, definerer det som startpunkt for den nye tellefunksjonen. 
 
-const shitExpression = newExpression();
+function makeMultiplier(multiplier) {
+    return function (number) {
+        return number*multiplier
+    }
+}
 
-console.log(shitExpression)
+var expect = function(val) {
+    return {
+        toBe : function (val2){
+            if (val === val2) {
+                return "true"
+            } else {
+                throw new Error("Not Equal")
+            }
+        },
+        notToBe : function(val2){
+            if (val !== val2) {
+                return "true"
+            } else {
+                throw new Error("Equal")
+            }
+        }
+    }
+};
+
+expect(4).toBe(4)
 
 
-
-
-
-
+//lag en funksjon som returnerer en funksjon og bruk den til noe
+//gjør en leetcode
+//husk hvordan man lager objekter
