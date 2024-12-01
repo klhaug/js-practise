@@ -3,15 +3,21 @@
 
 // øv på å skrive funksjoner hver dag nå. Få inn forskjellen på expression, declaration, arrow, etc. 
 
-function newFunction (a) {
-    return function(b) {
-        return a * b
-    }
+
+
+function add(a, b) {
+    return a + b;
 }
 
-const multiplier = newFunction(2)
-multiplier(2);
+function subtract(a, b) {
+    return a - b;
+}
 
+function calculator(a, b) {
+    
+}
+
+const arrowFunction = () => "keeping the streak alive"
 
 //lag en funksjon som returnerer en funksjon og bruk den til noe
 //gjør en leetcode
