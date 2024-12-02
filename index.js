@@ -17,7 +17,7 @@ function calculator(a, b) {
     
 }
 
-const arrowFunction = () => "keeping the streak alive"
+const arrowFunction = () => "keeping the streak alive, again"
 
 //lag en funksjon som returnerer en funksjon og bruk den til noe
 //gjør en leetcode
